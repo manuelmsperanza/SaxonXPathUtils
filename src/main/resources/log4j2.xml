@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="0">
+	<Properties>
+		<Property name="activeProfile">stdout</Property>
+		<Property name="activeLevel">TRACE</Property>
+		<Property name="rollingFilename">SaxonXPathUtils</Property>
+	</Properties>
+	<Appenders>
+		<Console name="stdout" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss,SSS} %t %-5p [%c{1}::%M %L]  %m%n" />
+		</Console>
+		<RollingFile append="true" name="rollingFile"
+			fileName="logs/${rollingFilename}.log"
+			filePattern="logs/$${date:yyyy-MM}/${rollingFilename}-%d{MM-dd-yyyy}-%i.log"
+			immediateFlush="true">
+			<PatternLayout>
+				<Pattern>%d{yyyy-MM-dd HH:mm:ss,SSS} %t %-5p [%c{1}::%M %L] %m%n
+				</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="10 MB" />
+			</Policies>
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Logger name="***REMOVED***.xpath.App" level="${activeLevel}"
+			additivity="false">
+			<AppenderRef ref="${activeProfile}" />
+		</Logger>
+		<Logger name="***REMOVED***.xpath.XmlExtractor" level="${activeLevel}"
+			additivity="false">
+			<AppenderRef ref="${activeProfile}" />
+		</Logger>
+		<Logger name="***REMOVED***.xpath.XmlNsCtx" level="${activeLevel}"
+			additivity="false">
+			<AppenderRef ref="${activeProfile}" />
+		</Logger>
+		<Logger name="***REMOVED***.xpath.XmlExtractorBinding"
+			level="${activeLevel}" additivity="false">
+			<AppenderRef ref="${activeProfile}" />
+		</Logger>
+		<Root level="error">
+			<AppenderRef ref="${activeProfile}" />
+		</Root>
+	</Loggers>
+</Configuration>
