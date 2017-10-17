@@ -55,7 +55,7 @@
 		<dependency>
 			<groupId>com.oracle.jdbc</groupId>
 			<artifactId>ojdbc7</artifactId>
-			<version>12.1.0.2</version>
+			<version>12.1.0.2_patched</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
 		<dependency>
@@ -71,7 +71,7 @@
 		<dependency>
 			<groupId>net.sf.saxon</groupId>
 			<artifactId>Saxon-HE</artifactId>
-			<version>9.8.0-4</version>
+			<version>9.8.0-5</version>
 		</dependency>
 	</dependencies>
 </project>
