@@ -4,7 +4,7 @@
 
 	<groupId>***REMOVED***</groupId>
 	<artifactId>SaxonXPathUtils</artifactId>
-	<version>1.0.6</version>
+	<version>1.0.7</version>
 	<packaging>jar</packaging>
 
 	<name>SaxonXPathUtils</name>
@@ -71,7 +71,7 @@
 		<dependency>
 			<groupId>net.sf.saxon</groupId>
 			<artifactId>Saxon-HE</artifactId>
-			<version>9.8.0-8</version>
+			<version>9.8.0-11</version>
 		</dependency>
 	</dependencies>
 </project>
