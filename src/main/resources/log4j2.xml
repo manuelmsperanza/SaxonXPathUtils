@@ -25,19 +25,19 @@
 		</RollingFile>
 	</Appenders>
 	<Loggers>
-		<Logger name="***REMOVED***.xpath.App" level="${activeLevel}"
+		<Logger name="net.dtdns.hoffunungland.xpath.App" level="${activeLevel}"
 			additivity="false">
 			<AppenderRef ref="${activeProfile}" />
 		</Logger>
-		<Logger name="***REMOVED***.xpath.XmlExtractor" level="${activeLevel}"
+		<Logger name="net.dtdns.hoffunungland.xpath.XmlExtractor" level="${activeLevel}"
 			additivity="false">
 			<AppenderRef ref="${activeProfile}" />
 		</Logger>
-		<Logger name="***REMOVED***.xpath.XmlNsCtx" level="${activeLevel}"
+		<Logger name="net.dtdns.hoffunungland.xpath.XmlNsCtx" level="${activeLevel}"
 			additivity="false">
 			<AppenderRef ref="${activeProfile}" />
 		</Logger>
-		<Logger name="***REMOVED***.xpath.XmlExtractorBinding"
+		<Logger name="net.dtdns.hoffunungland.xpath.XmlExtractorBinding"
 			level="${activeLevel}" additivity="false">
 			<AppenderRef ref="${activeProfile}" />
 		</Logger>
