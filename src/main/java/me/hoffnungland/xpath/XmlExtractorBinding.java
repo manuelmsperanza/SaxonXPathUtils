@@ -1,4 +1,4 @@
-package net.dtdns.hoffnungland.xpath;
+package me.hoffnungland.xpath;
 import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
