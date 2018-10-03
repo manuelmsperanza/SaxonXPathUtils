@@ -8,12 +8,12 @@ mvn archetype:generate -DarchetypeCatalog=http://repo.maven.apache.org/maven2/ar
 		<maven>3.0</maven>
 	</prerequisites>
 ##Configure the compiler
-Update to java 1.7<br>
+Update to java 1.8<br>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.source.version>1.7</java.source.version>
-		<java.target.version>1.7</java.target.version>
+		<java.source.version>1.8</java.source.version>
+		<java.target.version>1.8</java.target.version>
 	</properties>
 	<build>
 		<pluginManagement>
