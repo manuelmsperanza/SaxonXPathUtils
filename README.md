@@ -84,3 +84,10 @@ Update jUnit, add log4j, jdbc, saxon<br>
 [descriptorRef src](http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#src)
 ##Package the source code in a zip file
 mvn clean assembly:single -Ddescriptor=src/main/assembly/backup.xml -DfinalName=${project.artifactId} -DoutputDirectory=${user.home}
+
+
+#add .gitignore to mandatory empty directory
+	# Ignore everything in this directory
+	*
+	# Except this file
+	!.gitignore
