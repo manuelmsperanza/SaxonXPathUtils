@@ -4,7 +4,7 @@
 
 	<groupId>me.hoffnungland</groupId>
 	<artifactId>SaxonXPathUtils</artifactId>
-	<version>1.0.12</version>
+	<version>1.0.13</version>
 	<packaging>jar</packaging>
 
 	<name>SaxonXPathUtils</name>
@@ -59,18 +59,18 @@
 		<dependency>
 			<groupId>com.oracle.jdbc</groupId>
 			<artifactId>ojdbc8</artifactId>
-			<version>12.2.0.1</version>
+			<version>18.3.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.oracle.jdbc</groupId>
 			<artifactId>ucp</artifactId>
-			<version>12.2.0.1</version>
+			<version>18.3.0.0</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/net.sf.saxon/Saxon-HE -->
 		<dependency>
 			<groupId>net.sf.saxon</groupId>
 			<artifactId>Saxon-HE</artifactId>
-			<version>9.9.0-1</version>
+			<version>9.9.0-2</version>
 		</dependency>
 	</dependencies>
 </project>
