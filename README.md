@@ -1,5 +1,5 @@
 #Create a new project
-mvn archetype:generate -DarchetypeCatalog=http://repo.maven.apache.org/maven2/archetype-catalog.xml -Dfilter=maven-archetype-quickstart -DgroupId=me.hoffnungland -DartifactId=SaxonXPathUtils -Dpackage=me.hoffnungland.xpath -Dversion=1.0.1-SNAPSHOT
+mvn archetype:generate -DarchetypeCatalog=org.apache.maven.archetypes -Dfilter=maven-archetype-quickstart -DgroupId=me.hoffnungland -DartifactId=SaxonXPathUtils -Dpackage=me.hoffnungland.xpath -Dversion=1.0.1-SNAPSHOT
 
 #Build settings
 ##Add prerequisites
