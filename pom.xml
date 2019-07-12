@@ -26,22 +26,6 @@
 		<java.source.version>1.8</java.source.version>
 		<java.target.version>1.8</java.target.version>
 	</properties>
-	<repositories>
-		<repository>
-			<id>maven.oracle.com</id>
-			<url>https://maven.oracle.com</url>
-			<layout>default</layout>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>maven.oracle.com</id>
-			<url>https://maven.oracle.com</url>
-		</pluginRepository>
-	</pluginRepositories>
 	<build>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
 				defaults (may be moved to parent pom) -->
