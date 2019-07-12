@@ -25,19 +25,19 @@
 		</RollingFile>
 	</Appenders>
 	<Loggers>
-		<Logger name="me.hoffnungland.xpath.App" level="${activeLevel}"
+		<Logger name="com.hoffnungland.xpath.App" level="${activeLevel}"
 			additivity="false">
 			<AppenderRef ref="${activeProfile}" />
 		</Logger>
-		<Logger name="me.hoffnungland.xpath.XmlExtractor" level="${activeLevel}"
+		<Logger name="com.hoffnungland.xpath.XmlExtractor" level="${activeLevel}"
 			additivity="false">
 			<AppenderRef ref="${activeProfile}" />
 		</Logger>
-		<Logger name="me.hoffnungland.xpath.XmlNsCtx" level="${activeLevel}"
+		<Logger name="com.hoffnungland.xpath.XmlNsCtx" level="${activeLevel}"
 			additivity="false">
 			<AppenderRef ref="${activeProfile}" />
 		</Logger>
-		<Logger name="me.hoffnungland.xpath.XmlExtractorBinding"
+		<Logger name="com.hoffnungland.xpath.XmlExtractorBinding"
 			level="${activeLevel}" additivity="false">
 			<AppenderRef ref="${activeProfile}" />
 		</Logger>

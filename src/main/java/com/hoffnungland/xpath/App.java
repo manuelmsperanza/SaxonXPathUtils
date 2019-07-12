@@ -1,4 +1,4 @@
-package me.hoffnungland.xpath;
+package com.hoffnungland.xpath;
 
 import java.io.IOException;
 import java.io.Reader;
