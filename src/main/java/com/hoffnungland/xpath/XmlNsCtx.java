@@ -1,4 +1,4 @@
-package me.hoffnungland.xpath;
+package com.hoffnungland.xpath;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
