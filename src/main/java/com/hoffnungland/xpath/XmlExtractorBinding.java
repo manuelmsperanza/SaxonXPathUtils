@@ -39,7 +39,6 @@ public class XmlExtractorBinding {
 		//this.itemTypeFactory = new ItemTypeFactory(this.xPathProcessor);
 		this.nsCtx = new XmlNsCtx(this.xPathProcessor.newXPathCompiler());
 
-
 		if (xmlNs != null && !xmlNs.isEmpty()) {
 			this.nsCtx.addNamespace(xmlNs);
 		}
@@ -104,7 +103,7 @@ public class XmlExtractorBinding {
 		//this.xpath.compile(xPathStr);
 
 		XPathSelector xPathSelect = this.nsCtx.compileXPath(xPathStr);
-		xPathSelect.setContextItem(docNode);
+		xPathSelect.setContextItem(this.docNode);
 		XdmValue nodeValues = xPathSelect.evaluate();
 		if (nodeValues.size() > 0) {
 			return logger.traceExit(nodeValues.itemAt(0).getStringValue());
@@ -120,7 +119,7 @@ public class XmlExtractorBinding {
 		logger.debug("Evaluating xpath " + xPath);
 		XPathSelector xPathSelect = this.nsCtx.compileXPath(xPath);
 
-		xPathSelect.setContextItem(docNode);
+		xPathSelect.setContextItem(this.docNode);
 		
 		return logger.traceExit(xPathSelect.evaluate());
 	}
@@ -129,7 +128,7 @@ public class XmlExtractorBinding {
 		logger.traceEntry();
 		logger.debug("Evaluating xpath " + xPath);
 		XPathSelector xPathSelect = this.nsCtx.compileXPath(xPath);
-		xPathSelect.setContextItem(docNode);
+		xPathSelect.setContextItem(this.docNode);
 		return logger.traceExit(xPathSelect);
 	}
 
@@ -144,4 +143,5 @@ public class XmlExtractorBinding {
 		return logger.traceExit(xPathSelect.evaluate());
 
 	}
+	
 }
