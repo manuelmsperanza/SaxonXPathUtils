@@ -4,7 +4,7 @@
 
 	<groupId>com.hoffnungland</groupId>
 	<artifactId>SaxonXPathUtils</artifactId>
-	<version>1.0.19</version>
+	<version>1.0.20</version>
 	<packaging>jar</packaging>
 
 	<name>SaxonXPathUtils</name>
@@ -107,7 +107,7 @@
 		<dependency>
 			<groupId>com.hoffnungland</groupId>
 			<artifactId>Log4j</artifactId>
-			<version>1.0.6</version>
+			<version>1.0.7</version>
 		</dependency>
 		<!-- https://maven.oracle.com -->
 		<dependency>
@@ -124,7 +124,7 @@
 		<dependency>
 			<groupId>net.sf.saxon</groupId>
 			<artifactId>Saxon-HE</artifactId>
-			<version>10.0</version>
+			<version>10.1</version>
 		</dependency>
 	</dependencies>
 </project>
