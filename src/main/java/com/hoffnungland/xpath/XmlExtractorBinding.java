@@ -20,7 +20,6 @@ import net.sf.saxon.s9api.Processor;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.SaxonApiUncheckedException;
 import net.sf.saxon.s9api.XPathSelector;
-import net.sf.saxon.s9api.XdmItem;
 import net.sf.saxon.s9api.XdmNode;
 import net.sf.saxon.s9api.XdmValue;
 
@@ -114,27 +113,6 @@ public class XmlExtractorBinding {
 
 
 	}
-	
-	public String extractString(XdmItem nodeItem, String xPathStr) throws SaxonApiException  {
-		logger.traceEntry();
-		if(nodeItem.isEmpty() || !nodeItem.isNode()) {
-			return logger.traceExit((String) null);
-		}
-
-		XdmNode xPathNode = (XdmNode) nodeItem;
-		logger.debug("Evaluating xpath " + xPathStr);
-		//this.xpath.compile(xPathStr);
-
-		XPathSelector xPathSelect = this.nsCtx.compileXPath(xPathStr);
-		xPathSelect.setContextItem(xPathNode);
-		XdmValue nodeValues = xPathSelect.evaluate();
-		if (nodeValues.size() > 0) {
-			return logger.traceExit(nodeValues.itemAt(0).getStringValue());
-		} else {
-			return logger.traceExit((String) null);
-		}
-
-	}
 
 	public XdmValue extractNode(String xPath) throws SaxonApiException, IndexOutOfBoundsException, SaxonApiUncheckedException, SAXException, IOException, ParserConfigurationException  {
 		logger.traceEntry();
@@ -145,42 +123,12 @@ public class XmlExtractorBinding {
 		
 		return logger.traceExit(xPathSelect.evaluate());
 	}
-	
-	public XdmValue extractNode(XdmItem nodeItem, String xPath) throws SaxonApiException, IndexOutOfBoundsException, SaxonApiUncheckedException, SAXException, IOException, ParserConfigurationException  {
-		logger.traceEntry();
-		
-		if(nodeItem.isEmpty() || !nodeItem.isNode()) {
-			return logger.traceExit((XdmValue) null);
-		}
-
-		XdmNode xPathNode = (XdmNode) nodeItem;
-		
-		logger.debug("Evaluating xpath " + xPath);
-		XPathSelector xPathSelect = this.nsCtx.compileXPath(xPath);
-
-		xPathSelect.setContextItem(xPathNode);
-		
-		return logger.traceExit(xPathSelect.evaluate());
-	}
 
 	public XPathSelector defineXPath(String xPath) throws SaxonApiException {
 		logger.traceEntry();
 		logger.debug("Evaluating xpath " + xPath);
 		XPathSelector xPathSelect = this.nsCtx.compileXPath(xPath);
 		xPathSelect.setContextItem(this.docNode);
-		return logger.traceExit(xPathSelect);
-	}
-	
-	public XPathSelector defineXPath(XdmItem nodeItem, String xPath) throws SaxonApiException {
-		logger.traceEntry();
-		if(nodeItem.isEmpty() || !nodeItem.isNode()) {
-			return logger.traceExit((XPathSelector) null);
-		}
-
-		XdmNode xPathNode = (XdmNode) nodeItem;
-		logger.debug("Evaluating xpath " + xPath);
-		XPathSelector xPathSelect = this.nsCtx.compileXPath(xPath);
-		xPathSelect.setContextItem(xPathNode);
 		return logger.traceExit(xPathSelect);
 	}
 
