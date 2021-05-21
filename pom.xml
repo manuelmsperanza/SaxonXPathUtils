@@ -4,7 +4,7 @@
 
 	<groupId>com.hoffnungland</groupId>
 	<artifactId>SaxonXPathUtils</artifactId>
-	<version>1.0.22</version>
+	<version>1.0.23</version>
 	<packaging>jar</packaging>
 
 	<name>SaxonXPathUtils</name>
@@ -154,7 +154,7 @@
 		<dependency>
 			<groupId>net.sf.saxon</groupId>
 			<artifactId>Saxon-HE</artifactId>
-			<version>10.3</version>
+			<version>10.5</version>
 		</dependency>
 	</dependencies>
 </project>
