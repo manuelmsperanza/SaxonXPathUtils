@@ -99,7 +99,7 @@ public class XmlExtractorBinding {
 	public String extractString(String xPathStr) throws SaxonApiException  {
 		logger.traceEntry();
 
-		logger.debug("Evaluating xpath " + xPathStr);
+		logger.trace("Evaluating xpath " + xPathStr);
 		//this.xpath.compile(xPathStr);
 
 		XPathSelector xPathSelect = this.nsCtx.compileXPath(xPathStr);
@@ -116,7 +116,7 @@ public class XmlExtractorBinding {
 
 	public XdmValue extractNode(String xPath) throws SaxonApiException, IndexOutOfBoundsException, SaxonApiUncheckedException, SAXException, IOException, ParserConfigurationException  {
 		logger.traceEntry();
-		logger.debug("Evaluating xpath " + xPath);
+		logger.trace("Evaluating xpath " + xPath);
 		XPathSelector xPathSelect = this.nsCtx.compileXPath(xPath);
 
 		xPathSelect.setContextItem(this.docNode);
@@ -126,7 +126,7 @@ public class XmlExtractorBinding {
 
 	public XPathSelector defineXPath(String xPath) throws SaxonApiException {
 		logger.traceEntry();
-		logger.debug("Evaluating xpath " + xPath);
+		logger.trace("Evaluating xpath " + xPath);
 		XPathSelector xPathSelect = this.nsCtx.compileXPath(xPath);
 		xPathSelect.setContextItem(this.docNode);
 		return logger.traceExit(xPathSelect);
