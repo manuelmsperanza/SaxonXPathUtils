@@ -100,30 +100,32 @@
 				</executions>
 			</plugin>
 			<plugin>
-        		<artifactId>maven-jarsigner-plugin</artifactId>
-		        <executions>
-		        	<execution>
-		            	<id>sign</id>
-		            	<goals>
-		              		<goal>sign</goal>
-		            	</goals>
-		            	<configuration>
+				<artifactId>maven-jarsigner-plugin</artifactId>
+				<executions>
+					<execution>
+					<id>sign</id>
+					<goals>
+						<goal>sign</goal>
+					</goals>
+					<configuration>
           					<keystore>${hoffnunglandJksPath}</keystore>
           					<alias>${hoffnunglandJksEntry}</alias>
           					<storepass>${hoffnunglandJksPasswd}</storepass>
-		            	</configuration>
-		          	</execution>
-		          	<execution>
-		            	<id>verify</id>
-		            	<goals>
-		              		<goal>verify</goal>
-		            	</goals>
-		            	<configuration>		            		
-		            		<certs>true</certs>
-		            	</configuration>
-		          	</execution>
-		        </executions>
-      		</plugin>
+          					<keypass>${hoffnunglandKeyPasswd}</keypass>
+          					<tsa>${hoffnunglandTsaUrl}</tsa>
+					</configuration>
+					</execution>
+					<execution>
+					<id>verify</id>
+					<goals>
+						<goal>verify</goal>
+					</goals>
+					<configuration>		            		
+						<certs>true</certs>
+					</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
