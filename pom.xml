@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.hoffnungland</groupId>
 	<artifactId>saxonxpathutils</artifactId>
-	<version>1.0.23-SNAPSHOT</version>
+	<version>1.0.23</version>
 	<packaging>jar</packaging>
 
 	<name>SaxonXPathUtils</name>
@@ -19,7 +18,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/manuelmsperanza/SaxonXPathUtils.git</connection>
 		<developerConnection>scm:git:git@github.com:manuelmsperanza/SaxonXPathUtils.git</developerConnection>     
-		<tag>HEAD</tag>
+		<tag>saxonxpathutils-1.0.23</tag>
 	</scm>
 	<issueManagement>
 		<system>GitHub</system>
