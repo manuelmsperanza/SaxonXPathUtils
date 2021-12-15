@@ -5,7 +5,7 @@ mvn archetype:generate -Dfilter="org.apache.maven.archetypes:maven-archetype-qui
 ##Add prerequisites
 
 	<prerequisites>
-		<maven>3.0.5</maven>
+		<maven>3.1.0</maven>
 	</prerequisites>
 
 Update to java 1.8<br>
