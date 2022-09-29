@@ -1,8 +1,8 @@
-#Create a new project
-mvn archetype:generate -Dfilter="org.apache.maven.archetypes:maven-archetype-quickstart" -DgroupId="com.hoffnungland" -DartifactId=SaxonXPathUtils -Dpackage="com.hoffnungland.xpath" -Dversion="1.0.1-SNAPSHOT"
+# Create a new project
+ mvn archetype:generate -Dfilter="org.apache.maven.archetypes:maven-archetype-quickstart" -DgroupId="com.hoffnungland" -DartifactId=SaxonXPathUtils -Dpackage="com.hoffnungland.xpath" -Dversion="1.0.1-SNAPSHOT"
 
-#Build settings
-##Add prerequisites
+# Build settings
+## Add prerequisites
 
 	<prerequisites>
 		<maven>3.1.0</maven>
@@ -16,7 +16,7 @@ Update to java 1.8<br>
 		<java.target.version>1.8</java.target.version>
 	</properties>
 
-##Configure the plugins
+## Configure the plugins
 	
 	<build>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
@@ -90,8 +90,9 @@ Update to java 1.8<br>
 	</build>
 
 
-#Relationship
-##Add dependencies
+# Relationship
+## Add dependencies
+
 Update jUnit, add log4j, jdbc, saxon<br>
 
 	<dependencyManagement>
@@ -137,15 +138,22 @@ Update jUnit, add log4j, jdbc, saxon<br>
 		</dependency>
 	</dependencies>
 
-#Backup
-##Create assembly configuration file backup.xml
+# Backup
+## Create assembly configuration file backup.xml
 [descriptorRef src](http://maven.apache.org/plugins/maven-assembly-plugin/descriptor-refs.html#src)
-##Package the source code in a zip file
+
+## Package the source code in a zip file
 mvn clean assembly:single -Ddescriptor=src/main/assembly/backup.xml -DfinalName=${project.artifactId} -DoutputDirectory=${user.home}
 
+# add .gitignore to mandatory empty directory
 
-#add .gitignore to mandatory empty directory
 	# Ignore everything in this directory
 	*
 	# Except this file
 	!.gitignore
+
+# Configure the Package Clean UP Automation with GitHub Action
+
+The Action run during the release phase of package (or you can run it manually).
+Leave only the latest package version into the repository.
+Create the .github/workflows/cleanupPackages.yml file.

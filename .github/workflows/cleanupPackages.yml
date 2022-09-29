@@ -1,0 +1,34 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Package Clean UP Automation
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on package publishing event
+  #push:
+     #branches: [ "main" ]
+  registry_package:
+    types: [published]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      #- env:
+          #EVENT_CONTEXT: ${{ toJSON(github.event) }}
+        #run: |
+          #echo $EVENT_CONTEXT
+
+      - name: Delete Package Versions ${{ github.event.registry_package.name }}
+        uses: actions/delete-package-versions@v3
+        with:
+          package-name: ${{ github.event.registry_package.name }}
+          min-versions-to-keep: 1
