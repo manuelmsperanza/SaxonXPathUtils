@@ -138,13 +138,13 @@
 		<dependency>
 			<groupId>com.hoffnungland</groupId>
 			<artifactId>log4j</artifactId>
-			<version>1.0.14</version>
+			<version>1.0.19</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/net.sf.saxon/Saxon-HE -->
 		<dependency>
 			<groupId>net.sf.saxon</groupId>
 			<artifactId>Saxon-HE</artifactId>
-			<version>11.3</version>
+			<version>11.4</version>
 		</dependency>
 	</dependencies>
 </project>
