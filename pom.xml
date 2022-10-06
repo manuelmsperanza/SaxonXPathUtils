@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.hoffnungland</groupId>
 	<artifactId>saxonxpathutils</artifactId>
-	<version>1.0.30-SNAPSHOT</version>
+	<version>1.0.30</version>
 	<packaging>jar</packaging>
 	<name>SaxonXPathUtils</name>
 	<url>http://maven.apache.org</url>
@@ -16,7 +16,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/manuelmsperanza/SaxonXPathUtils.git</connection>
 		<developerConnection>scm:git:git@github.com:manuelmsperanza/SaxonXPathUtils.git</developerConnection>     
-		<tag>HEAD</tag>
+		<tag>saxonxpathutils-1.0.30</tag>
 	</scm>
 	<issueManagement>
 		<system>GitHub</system>
