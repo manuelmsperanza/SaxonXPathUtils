@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.hoffnungland</groupId>
 	<artifactId>saxonxpathutils</artifactId>
-	<version>1.0.32</version>
+	<version>1.0.33-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>SaxonXPathUtils</name>
 	<url>http://maven.apache.org</url>
