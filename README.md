@@ -157,3 +157,10 @@ mvn clean assembly:single -Ddescriptor=src/main/assembly/backup.xml -DfinalName=
 The Action run during the release phase of package (or you can run it manually).
 Leave only the latest package version into the repository.
 Create the .github/workflows/cleanupPackages.yml file.
+
+
+# Support
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K441XSO)
+
+[![Support the development of these features](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/donate/?business=VU48PTCSF93A2&no_recurring=0&item_name=Support+the+development+of+these+features.&currency_code=USD)
