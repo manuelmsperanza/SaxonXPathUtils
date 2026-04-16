@@ -33,7 +33,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>25</maven.compiler.release>
     <maven.compiler.parameters>true</maven.compiler.parameters>
-    <junit.jupiter.version>5.12.2</junit.jupiter.version>
+    <junit.jupiter.version>6.0.3</junit.jupiter.version>
   </properties>
 
   <build>
@@ -61,16 +61,10 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-api</artifactId>
-      <version>2.25.2</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-core</artifactId>
-      <version>2.25.2</version>
-      <scope>runtime</scope>
-    </dependency>
+			<groupId>com.hoffnungland</groupId>
+			<artifactId>log4j</artifactId>
+			<version>2.25.4.40</version>
+		</dependency>
     <dependency>
       <groupId>net.sf.saxon</groupId>
       <artifactId>Saxon-HE</artifactId>
