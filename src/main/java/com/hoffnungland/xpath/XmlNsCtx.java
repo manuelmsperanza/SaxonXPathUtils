@@ -18,6 +18,9 @@ import net.sf.saxon.s9api.XPathExecutable;
 import net.sf.saxon.s9api.XPathSelector;
 
 
+/**
+ * Namespace context and XPath compiler helper for dynamic XML namespace handling.
+ */
 public class XmlNsCtx implements NamespaceContext {
 	
 	private static final Logger logger = LogManager.getLogger(XmlNsCtx.class);
@@ -25,6 +28,11 @@ public class XmlNsCtx implements NamespaceContext {
 	private TreeMap<String, String> nsList;
 	private XPathCompiler xPathCompiler;
 	
+	/**
+	 * Builds a namespace context backed by the provided compiler.
+	 *
+	 * @param xPathCompiler Saxon XPath compiler instance
+	 */
 	public XmlNsCtx(XPathCompiler xPathCompiler) {
 		logger.traceEntry();
 		this.nsList = new TreeMap<String, String>();
@@ -32,18 +40,33 @@ public class XmlNsCtx implements NamespaceContext {
 		logger.traceExit();
 	}
 	
+	/**
+	 * Enables/disables Saxon XPath compilation cache.
+	 *
+	 * @param cachingFlag {@code true} to enable caching
+	 */
 	public void setXpathCompilerCaching(boolean cachingFlag){
 		logger.traceEntry();
 		this.xPathCompiler.setCaching(cachingFlag);
 		logger.traceExit();
 	}
 	
+	/**
+	 * Declares a variable that can later be bound at evaluation time.
+	 *
+	 * @param bindingVar variable name to declare
+	 */
 	public void setCompilerBinding(net.sf.saxon.s9api.QName bindingVar){
 		logger.traceEntry();
 		this.xPathCompiler.declareVariable(bindingVar);
 		logger.traceExit();
 	}
 	
+	/**
+	 * Parses and registers XML namespace declarations (e.g. {@code xmlns:a="urn:a"}).
+	 *
+	 * @param namespace namespace declaration string
+	 */
 	public void addNamespace(String namespace){
 		logger.traceEntry();
 		logger.debug("addNamespace " + namespace);
@@ -94,6 +117,13 @@ public class XmlNsCtx implements NamespaceContext {
 		return logger.traceExit((String) null);
 	}
 	
+	/**
+	 * Compiles and loads an XPath expression into a selector.
+	 *
+	 * @param xPathStr XPath expression text
+	 * @return loaded selector ready for context and evaluation
+	 * @throws SaxonApiException if compilation fails
+	 */
 	public XPathSelector compileXPath(String xPathStr) throws SaxonApiException{
 		logger.traceEntry();
 		XPathExecutable xPathExe = this.xPathCompiler.compile(xPathStr);

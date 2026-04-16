@@ -23,6 +23,9 @@ import net.sf.saxon.s9api.XPathSelector;
 import net.sf.saxon.s9api.XdmNode;
 import net.sf.saxon.s9api.XdmValue;
 
+/**
+ * XPath extractor supporting external variable bindings.
+ */
 public class XmlExtractorBinding {
 	private static final Logger logger = LogManager.getLogger(XmlExtractorBinding.class);
 
@@ -32,6 +35,9 @@ public class XmlExtractorBinding {
 	private XmlNsCtx nsCtx;
 	private XdmNode docNode;
 
+		/**
+	 * Common initializer for processor/compiler, optional namespaces and variables.
+	 */
 	//Common init steps
 	private void init(String xmlNs, net.sf.saxon.s9api.QName[] listBindingVar) {
 		logger.traceEntry();
